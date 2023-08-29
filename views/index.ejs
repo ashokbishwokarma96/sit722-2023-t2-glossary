@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>
+    <%= title %>
+  </title>
+  <style>
+    table {
+      border-collapse: collapse;
+      width: 100%;
+    }
+
+    th,
+    td {
+      border: 1px solid black;
+      padding: 8px;
+      text-align: left;
+    }
+
+    th {
+      background-color: #f2f2f2;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>
+    <%= title %>
+  </h1>
+  <table>
+    <tr>
+      <th>ID</th>
+      <th>Term</th>
+      <th>Description</th>
+      <th>References</th>
+    </tr>
+    <tr>
+      <% for (const item of glossary) { %>
+    <tr>
+      <td>
+        <%= item.id %>
+      </td>
+      <td>
+        <%= item.term %>
+      </td>
+      <td>
+        <%= item.description %>
+      </td>
+      <td>
+        <%= item.references %>
+      </td>
+    </tr>
+    <% } %>
+      </tr>
+      <!-- Add more rows as needed -->
+  </table>
+</body>
+
+</html>
